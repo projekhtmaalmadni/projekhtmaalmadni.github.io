@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Hotama</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                           'teal-custom': '#1dd1a1',
+                        'lawut': '#067079',
+                        'dark-bg': '#081013',
+                        'dark-card': '#1a2332',
+                        'lawut-dark': '#013a3d',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter'],
+                        'sans':['sans-serif'],
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    },
+                    animation: {
+                        'scroll': 'scroll 20s linear infinite',
+                    },
+                    keyframes: {
+                        'scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.6s ease-out;
+        }
+        .scroll-reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+       .phone-reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.phone-reveal.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+            opacity: 0;
+            transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+        }
+        #mobile-menu.show {
+            max-height: 240px;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-slate-900 to-black text-white font-inter scroll-smooth">
+    <!-- Navigation - Same as index.html -->
+    <nav id="navbar"
+        class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-3 sm:px-5 h-18 py-3 bg-black/20 backdrop-blur-lg rounded-[32px] border border-white/20 shadow-md 
+                opacity-0 -translate-y-20 transition-all duration-700 ease-out">
+
+        <div class="relative flex items-center justify-between">
+            <!-- Logo (kiri) -->
+            <div class="flex items-center space-x-2">
+                <img src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png?scale-down-to=512"
+                    alt="hotama" class="w-[120px] h-auto ml-3" />
+            </div>
+
+            <!-- Desktop Menu (tengah) -->
+            <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center space-x-10 text-sm font-medium text-white">
+                <a href="index.html#services" class="hover:text-teal-400 transition">Our Services</a>
+                <a href="index.html#about" class="hover:text-teal-400 transition">About Us</a>
+                <a href="allprojects.html" class="hover:text-teal-400 transition">Project</a>
+                <a href="index.html#testi" class="hover:text-teal-400 transition">Testimoni</a>
+            </div>
+
+            <!-- Button (kanan) -->
+            <div class="hidden md:flex items-center">
+                <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fputrahotama%2Fposts%2F%3FfeedView%3Dall"
+                    class="ml-4 bg-white text-black px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white transition-colors">
+                    Let's Talk
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden flex items-center space-x-2">
+                <button id="mobile-menu-btn" class="text-white hover:text-teal-400 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="md:hidden w-full max-w-2xl px-8 py-10 text-white opacity-0 pointer-events-none transition-all duration-500 ease-out">
+            <div class="flex flex-col gap-6 text-lg font-semibold">
+                <a href="index.html#services" class="hover:text-teal-400 transition">Our Services</a>
+                <a href="index.html#about" class="hover:text-teal-400 transition">About Us</a>
+                <a href="allprojects.html" class="hover:text-teal-400 transition">Project</a>
+                <a href="index.html#testi" class="hover:text-teal-400 transition">Testimoni</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Project Hero Section -->
+<section class="hero-gradient min-h-[90vh] flex flex-col items-center justify-start px-6 py-32 relative overflow-hidden">
+  <!-- Overlay gradasi bawaan -->
+  <div class="absolute inset-0 bg-gradient-to-b from-lawut via-lawut-dark to-dark-bg opacity-90"></div>
+
+  <!-- Container isi hero -->
+  <section class="relative z-10 flex flex-col items-center text-center gap-8">
+    
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-teal-400 text-teal-300 bg-teal-500/10 shadow-sm">
+      <span class="w-2.5 h-2.5 bg-teal-400 rounded-full"></span>
+      <span class="text-sm font-medium">Qara’a Release</span>
+    </div>
+
+    <!-- Title -->
+  <!-- Title dengan Logo -->
+<!-- Title -->
+<!-- Title -->
+<h1 class="flex flex-col items-center justify-center text-center 
+           text-3xl md:text-6xl font-bold leading-tight">
+  <span class="bg-gradient-to-b from-white via-white to-lawut text-transparent bg-clip-text">
+    Make Learn Qur'an
+  </span>
+  <span class="flex items-center gap-3 mt-2">
+    <span class="bg-gradient-to-b from-white via-white to-lawut text-transparent bg-clip-text">
+      Fun With
+    </span>
+    <span class="flex items-center gap-2 text-purple-400">
+      <img src="img/logo.png" 
+           alt="Qara'a Logo" 
+           class="h-12 md:h-16 w-auto scale-125" />
+      Qara’a
+    </span>
+  </span>
+</h1>   
+
+
+<!-- Subtitle -->
+<p class="mt-4 text-gray-300 text-lg max-w-2xl text-center">
+  Qara'a is an interactive and modern digital Al-Qur'an learning platform.  
+
+</p>
+
+
+    <!-- Phone / App Preview -->
+<div class="relative w-full max-w-xl mx-auto mt-[500px] phone-reveal">
+  <div class="relative">
+    <!-- Screenshot -->
+    <div class="absolute top-[40px] left-[-220px] right-[-220px] rounded-[40px] 
+                overflow-hidden z-10 scale-125">
+      <img src="https://framerusercontent.com/images/LCVsDCZG7TxEIg3DCqODtWRG0.png"
+           alt="App Screenshot"
+           class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Frame iPhone -->
+    <img src="img/mobileqaraa.png"
+         alt="iPhone Frame"
+         class="relative w-full max-w-xl mx-auto -translate-y-[430px] 
+                pointer-events-none z-30 scale-90" />
+  </div>
+</div>
+
+
+
+
+</section>
+
+
+
+    <!-- Project Overview -->
+    <section class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal">
+                    <h2 class="text-4xl font-semibold mb-6 bg-gradient-to-b from-white to-lawut via-white text-transparent bg-clip-text">
+                        Project Overview
+                    </h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Qara'a is an innovative educational application that combines traditional Islamic learning with modern digital technology. The platform offers interactive Quran learning, prayer time tracking, and comprehensive Islamic educational content.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+                            <span class="text-gray-300">Interactive Quran learning with audio recitation</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+                            <span class="text-gray-300">Prayer time notifications and Qibla direction</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+                            <span class="text-gray-300">Islamic calendar and important dates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-reveal">
+                    <div class="card-gradient rounded-2xl p-8">
+                        <img src="https://framerusercontent.com/images/LCVsDCZG7TxEIg3DCqODtWRG0.png" 
+                             alt="Qara'a App" 
+                             class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-20 bg-gradient-to-b from-[#0d1e22] to-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-semibold text-center mb-12 bg-gradient-to-b from-white to-lawut via-white text-transparent bg-clip-text scroll-reveal">
+                Technical Implementation
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-gradient rounded-xl p-6 scroll-reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-teal-400">Frontend</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• React Native for cross-platform</li>
+                        <li>• Tailwind CSS for styling</li>
+                        <li>• Redux for state management</li>
+                        <li>• React Navigation</li>
+                    </ul>
+                </div>
+                <div class="card-gradient rounded-xl p-6 scroll-reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-teal-400">Backend</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Node.js with Express</li>
+                        <li>• PostgreSQL database</li>
+                        <li>• RESTful API architecture</li>
+                        <li>• JWT authentication</li>
+                    </ul>
+                </div>
+                <div class="card-gradient rounded-xl p-6 scroll-reveal">
+                    <h3 class="text-xl font-semibold mb-4 text-teal-400">Features</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Offline mode capability</li>
+                        <li>• Push notifications</li>
+                        <li>• Audio streaming</li>
+                        <li>• Location-based services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-semibold text-center mb-12 bg-gradient-to-b from-white to-lawut via-white text-transparent bg-clip-text scroll-reveal">
+                Project Gallery
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="scroll-reveal">
+                    <div class="card-gradient rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop" 
+                             alt="Dashboard" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-semibold">User Dashboard</h4>
+                            <p class="text-sm text-gray-400">Clean and intuitive interface</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-reveal">
+                    <div class="card-gradient rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop" 
+                             alt="Quran Reader" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-semibold">Quran Reader</h4>
+                            <p class="text-sm text-gray-400">Interactive reading experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-reveal">
+                    <div class="card-gradient rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" 
+                             alt="Prayer Times" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-semibold">Prayer Times</h4>
+                            <p class="text-sm text-gray-400">Accurate timing with notifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section - Fixed to use exact same gradient as index.html -->
+    <section class="bg-gradient-to-b from-[#062b2d] to-[#081013] rounded-3xl mx-2 sm:mx-6 lg:mx-20 mt-24 text-center py-12 sm:py-16 px-4 sm:px-8 lg:px-12 scroll-reveal">
+        <!-- Logo -->
+        <div class="mb-6 flex justify-center">
+            <img src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png?scale-down-to=512"
+                 alt="Hotama Logo"
+                 class="w-30 h-12 object-contain">
+        </div>
+
+        <!-- Headline -->
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6">
+            Building smarter solutions for a better<br class="hidden md:block" />
+            future with <span class="text-teal-400">Hotama</span>
+        </h2>
+
+        <!-- CTA Button -->
+        <a href="#"
+           class="inline-block mt-4 bg-white text-dark-bg font-medium px-6 py-2 rounded-full hover:bg-teal-400 hover:text-white transition-colors duration-300">
+            Let's Talk
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg text-gray-400 py-20 px-6 mt-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="scroll-reveal">
+                <img class="w-[180px] h-auto ml-3 mb-5" src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png" alt="">
+                <p class="text-sm leading-relaxed">
+                    Empowering your digital transformation through innovation, technology, and tailored solutions.
+                </p>
+            </div>
+            <div class="scroll-reveal">
+                <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html#services" class="hover:text-teal-400 transition">Our Services</a></li>
+                    <li><a href="index.html#about" class="hover:text-teal-400 transition">About Us</a></li>
+                    <li><a href="allprojects.html" class="hover:text-teal-400 transition">Projects</a></li>
+                    <li><a href="index.html#testi" class="hover:text-teal-400 transition">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="scroll-reveal">
+                <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z"/>
+                        </svg>
+                        Pontianak, West Borneo
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.66l1.52 4.07a1 1 0 01-.27 1.11l-2.3 2.3a11.042 11.042 0 005.2 5.2l2.3-2.3a1 1 0 011.11-.27l4.07 1.52a1 1 0 01.66.94V19a2 2 0 01-2 2h-1C9.373 21 3 14.627 3 7V5z"/>
+                        </svg>
+                        (+62) 811 4867 735
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.5-4-9s1.5-6.5 4-9z"/>
+                        </svg>
+                        hotama.co.id
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-6 text-center text-sm">
+            &copy; 2025 HOTAMA. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            let menuOpen = false;
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                if (!menuOpen) {
+                    mobileMenu.classList.add('show');
+                    mobileMenu.classList.remove('pointer-events-none');
+                } else {
+                    mobileMenu.classList.remove('show');
+                    mobileMenu.classList.add('pointer-events-none');
+                }
+                menuOpen = !menuOpen;
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const scrollRevealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    scrollRevealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            scrollRevealObserver.observe(el);
+        });
+
+        // Navbar animation on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.remove('opacity-0', '-translate-y-20');
+            navbar.classList.add('opacity-100', 'translate-y-0');
+        });
+
+   const phoneObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      phoneObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.phone-reveal').forEach(el => {
+  phoneObserver.observe(el);
+});
+
+    </script>
+
+</body>
+</html>
