@@ -4,47 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotama</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/css/tailwind.css" rel="stylesheet">
 <link rel="icon" type="image/png" href="img/icon.png">
 
 
 
-    <script>
-        tailwind.config = {
-            theme: {  
-                extend: {
-                    colors: {
-                           'teal-custom': '#1dd1a1',
-                        'lawut': '#067079',
-                        'dark-bg': '#081013',
-                        'dark-card': '#1a2332',
-                        'lawut-dark': '#013a3d',
-                    },
-                    fontFamily: {
-                        'inter': ['Inter'],
-                        'sans':['sans-serif'],  
-                          'poppins': ['Poppins', 'sans-serif'],
-                    },
-                    backdropBlur: {
-                        'xs': '2px',
-                    },
-                    animation: {
-                        'scroll': 'scroll 20s linear infinite',
-                    },
-                    keyframes: {
-                        'scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        }
-                    }
-                }
-            } 
-        }
-        
-    </script>
+    <script src="assets/js/tailwind-config.js"></script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
       .glassmorphism {
             backdrop-filter: blur(12px);
@@ -330,7 +298,7 @@
 
     <!-- Logo (kiri) -->
     <div class="flex items-center space-x-2">
-      <img src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png?scale-down-to=512"
+      <img src="assets/images/hotama-logo.png"
         alt="hotama" class="w-[120px] h-auto ml-3" />
     </div>
 
@@ -419,14 +387,14 @@
                 </div>
                 <div class="marquee marquee--8 relative mt-12 mb-8">
                   
-    <img class="marquee__item h-[45px] w-[130px]" src="https://framerusercontent.com/images/zgSvzp8Ol6V6oc4CqJoLWu2I.png?scale-down-to=512" alt="lippo">
-    <img class="marquee__item h-[45px] w-[130px]" src="https://framerusercontent.com/images/d4v2Q1oJnD0sFwwjiZ0b8FgwBoo.png?scale-down-to=512"  alt="smart">
-    <img class="marquee__item h-[52px] w-[80px]" src="https://framerusercontent.com/images/n3i1xqTAiDLNSV51lOfhd07bmE.png?scale-down-to=512"  alt="flip">
-    <img class="marquee__item h-[45px] w-[130px]" src="https://framerusercontent.com/images/XZf7BlFBY69MWTeKsKWGKP8LUc.png?scale-down-to=512"  alt="pegasus">
-    <img class="marquee__item h-[45px] w-[130px]" src="https://framerusercontent.com/images/zgSvzp8Ol6V6oc4CqJoLWu2I.png?scale-down-to=512" alt="lippo">
-    <img class="marquee__item h-[45px] w-[130px]" src="https://framerusercontent.com/images/d4v2Q1oJnD0sFwwjiZ0b8FgwBoo.png?scale-down-to=512"  alt="smart">
-    <img class="marquee__item h-[52px] w-[80px]" src="https://framerusercontent.com/images/n3i1xqTAiDLNSV51lOfhd07bmE.png?scale-down-to=512"  alt="flip">
-    <img class="marquee__item h-[45px] w-[130px]" src="https://framerusercontent.com/images/XZf7BlFBY69MWTeKsKWGKP8LUc.png?scale-down-to=512"  alt="pegasus">
+    <img class="marquee__item h-[45px] w-[130px]" src="assets/images/lippo.png" alt="lippo">
+    <img class="marquee__item h-[45px] w-[130px]" src="assets/images/smart.png"  alt="smart">
+    <img class="marquee__item h-[52px] w-[80px]" src="assets/images/flip.png"  alt="flip">
+    <img class="marquee__item h-[45px] w-[130px]" src="assets/images/pegasus.png"  alt="pegasus">
+    <img class="marquee__item h-[45px] w-[130px]" src="assets/images/lippo.png" alt="lippo">
+    <img class="marquee__item h-[45px] w-[130px]" src="assets/images/smart.png"  alt="smart">
+    <img class="marquee__item h-[52px] w-[80px]" src="assets/images/flip.png"  alt="flip">
+    <img class="marquee__item h-[45px] w-[130px]" src="assets/images/pegasus.png"  alt="pegasus">
   </div>    
       </div>
         </div>
@@ -447,7 +415,7 @@
                   <!-- Service Card 1 -->
 <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors ">
       <div class="mb-8">
-          <img src="https://framerusercontent.com/images/Hs3vGn1lKBRtuffySk1J6ICPHg.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+          <img src="assets/images/service-icon-1.svg" alt="Service Icon" class="w-[60px] h-[60px]">
       </div>
       <h3 class="text-lg font-semibold mb-3">Website & Desktop App</h3>
       <p class="text-sm text-gray-400 leading-relaxed">
@@ -457,7 +425,7 @@
  <!-- Service Card 2 -->
 <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors">
       <div class="mb-8">
-          <img src="https://framerusercontent.com/images/IBCr2pKK7NNfRaaE09O8W2KQc.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+          <img src="assets/images/service-icon-2.svg" alt="Service Icon" class="w-[60px] h-[60px]">
       </div>
       <h3 class="text-lg font-semibold mb-3">Mobile Application</h3>
       <p class="text-sm text-gray-400 leading-relaxed">
@@ -467,7 +435,7 @@
              <!-- Service Card 3 -->
 <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors">
       <div class="mb-8">
-          <img src="https://framerusercontent.com/images/3SWLuSYSIPtmIgmKJOPOh6YE.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+          <img src="assets/images/service-icon-3.svg" alt="Service Icon" class="w-[60px] h-[60px]">
       </div>
       <h3 class="text-lg font-semibold mb-3">Digital Content</h3>
       <p class="text-sm text-gray-400 leading-relaxed">
@@ -477,7 +445,7 @@
                                <!-- Service Card 4 -->
         <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors">
       <div class="mb-8">
-          <img src="https://framerusercontent.com/images/M0mqWWffbKlVGfK78rGgORzBU.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+          <img src="assets/images/service-icon-4.svg" alt="Service Icon" class="w-[60px] h-[60px]">
       </div>
       <h3 class="text-lg font-semibold mb-3">SEO Services</h3>
       <p class="text-sm text-gray-400 leading-relaxed">
@@ -487,7 +455,7 @@
  <!-- Service Card 5 -->
   <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors">
       <div class="mb-8">
-          <img src="https://framerusercontent.com/images/mLRtSvf64crJscHb8ygILV2vkg.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+          <img src="assets/images/service-icon-5.svg" alt="Service Icon" class="w-[60px] h-[60px]">
       </div>
       <h3 class="text-lg font-semibold mb-3">Consulting</h3>
       <p class="text-sm text-gray-400 leading-relaxed">
@@ -499,7 +467,7 @@
                            <!-- Service Card 6 -->
   <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors">
       <div class="mb-8">
-          <img src="https://framerusercontent.com/images/AjK8RLnT2jVkKE5uKIpgGHLfh4Q.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+          <img src="assets/images/service-icon-6.svg" alt="Service Icon" class="w-[60px] h-[60px]">
       </div>
       <h3 class="text-lg font-semibold mb-3">Digital Strategist</h3>
       <p class="text-sm text-gray-400 leading-relaxed">
@@ -518,7 +486,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
                 <div class="order-1 lg:order-1">
                     <div class=" about-us-img rounded-2xl p-3 backdrop-blur-sm scroll-reveal mx-auto sm:w-auto w-full "> 
-                    <img class="rounded-2xl " src="https://framerusercontent.com/images/kS0nBwB7pKnWC3vlQzLBRwPVKYA.jpg?scale-down-to=512" alt="pegasus" class="max-w-fit"/>
+                    <img class="rounded-2xl " src="assets/images/project-pegasus.png" alt="pegasus" class="max-w-fit"/>
                
                 </div>
                   </div>
@@ -555,7 +523,7 @@
 <a href="qaraa.html" class="project-card group scroll-reveal relative block">
   <div class="card-gradient rounded-2xl overflow-hidden relative">
     <div class="relative overflow-hidden">
-      <img src="https://framerusercontent.com/images/LCVsDCZG7TxEIg3DCqODtWRG0.png" 
+      <img src="assets/images/project-qaraa.png" 
            alt="Project" 
            class="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105">
       
@@ -605,7 +573,7 @@
 <a href="#" class="project-card group scroll-reveal relative block">
   <div class="card-gradient rounded-2xl overflow-hidden relative">
     <div class="relative overflow-hidden">
-      <img src="https://framerusercontent.com/images/5wgXVrTb40sZ33YJlRdso0WBKMU.png" 
+      <img src="assets/images/project-pegasus.png" 
            alt="Project" 
            class="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105">
       
@@ -654,7 +622,7 @@
 <a href="#" class="project-card group scroll-reveal relative block">
   <div class="card-gradient rounded-2xl overflow-hidden relative">
     <div class="relative overflow-hidden">
-      <img src="https://framerusercontent.com/images/0DRCVrZ9lvpUkztM0H8Mpxwtak8.png?scale-down-to=512" 
+      <img src="assets/images/project-belanja.png" 
            alt="Project" 
            class="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105">
       
@@ -702,7 +670,7 @@
 <a href="detail-maureno.html" class="project-card group project-hidden fade-slide hidden relative block">
   <div class="card-gradient rounded-2xl overflow-hidden relative">
     <div class="relative overflow-hidden">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQHUe1ah3QVuZw/feedshare-shrink_800/B56ZhP4M34G0Ag-/0/1753686791500?e=1757548800&v=beta&t=84FaHE75670P8CWJ0y7vGDYAG7fC-T8CgOfEEd7_mVo" 
+      <img src="assets/images/project-qaraa.png" 
            alt="Project" 
            class="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105">
       
@@ -751,7 +719,7 @@
 <a href="detail-maureno.html" class="project-card group project-hidden fade-slide hidden relative block">
   <div class="card-gradient rounded-2xl overflow-hidden relative">
     <div class="relative overflow-hidden">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQGHbtJrtEIK2w/feedshare-shrink_800/B56ZhAJr8pG4Ao-/0/1753422939945?e=1757548800&v=beta&t=e-zLlmC-pay-EH9h-2QkrvWHAfleBbHGEs4gqQUuaRg" 
+      <img src="assets/images/project-pegasus.png" 
            alt="Project" 
            class="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105">
       
@@ -799,7 +767,7 @@
 <a href="detail-maureno.html" class="project-card group project-hidden fade-slide hidden relative block">
   <div class="card-gradient rounded-2xl overflow-hidden relative">
     <div class="relative overflow-hidden">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQGvTKA3KBtL5g/feedshare-shrink_800/B56Zg9SfQSHkAg-/0/1753374918119?e=1757548800&v=beta&t=qxnsAWhCrJGl9HmQOBI-US2FSTHk9esVZTyyTGK-L-0" 
+      <img src="assets/images/project-belanja.png" 
            alt="Project" 
            class="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105">
       
@@ -898,7 +866,7 @@
         <div class="bg-white/5 rounded-2xl p-6 w-[320px] h-[280px] flex flex-col justify-between shrink-0">
           <p class="mb-6 text-gray-300 text-sm leading-relaxed">Websites built on @framer are fast and responsive. I enjoyed working with their tools for my portfolio site!</p>
           <div class="flex items-center gap-4 pt-4">
-            <img src="https://i.pravatar.cc/48?img=2" alt="Fraky" class="w-12 h-12 rounded-full object-cover">
+            <img src="assets/images/avatar-2.png" alt="Fraky" class="w-12 h-12 rounded-full object-cover">
             <div>
               <h4 class="font-semibold">Fraky</h4>
               <p class="text-sm text-gray-400">@frekyplay</p>
@@ -909,7 +877,7 @@
         <div class="bg-white/5 rounded-2xl p-6 w-[320px] h-[280px] flex flex-col justify-between shrink-0">
           <p class="mb-6 text-gray-300 text-sm leading-relaxed">Websites built on @framer are fast and responsive. I enjoyed working with their tools for my portfolio site!</p>
           <div class="flex items-center gap-4 pt-4">
-            <img src="https://i.pravatar.cc/48?img=12" alt="Beingmani" class="w-12 h-12 rounded-full object-cover">
+            <img src="assets/images/avatar-1.png2" alt="Beingmani" class="w-12 h-12 rounded-full object-cover">
             <div>
               <h4 class="font-semibold">Beingmani</h4>
               <p class="text-sm text-gray-400">@beingmani</p>
@@ -967,7 +935,7 @@
 <section class="bg-gradient-to-b from-[#062b2d] to-[#081013] rounded-3xl mx-2 sm:mx-6 lg:mx-20 mt-24 text-center py-12 sm:py-16 px-4 sm:px-8 lg:px-12 scroll-reveal">
   <!-- Logo -->
   <div class="mb-6 flex justify-center">
-    <img src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png?scale-down-to=512"
+    <img src="assets/images/hotama-logo.png"
          alt="Hotama Logo"
          class="w-30 h-12 object-contain">
   </div>
@@ -992,7 +960,7 @@
     
     <!-- Company Info -->
     <div class="scroll-reveal">
-  <img class="w-[180px] h-auto ml-3 mb-5" src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png?scale-down-to=512" alt="">
+  <img class="w-[180px] h-auto ml-3 mb-5" src="assets/images/hotama-logo.png" alt="">
       <p class="text-sm leading-relaxed">
         Empowering your digital transformation through innovation, technology, and tailored solutions.
       </p>

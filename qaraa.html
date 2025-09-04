@@ -5,44 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details - Qaraa</title>
     <link rel="icon" type="image/png" href="img/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/css/tailwind.css" rel="stylesheet">
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'teal-custom': '#1dd1a1',
-                        'lawuts': '#034A4F',
-                        'lawut': '#067079',
-                        'dark-bg': '#081013',
-                        'dark-card': '#1a2332',
-                        'lawut-dark': '#013a3d',
-                        'teal-hytam': '#063E42',
-                    },
-                    fontFamily: {
-                        'inter': ['Inter'],
-                        'sans':['sans-serif'],
-                    },
-                    backdropBlur: {
-                        'xs': '2px',
-                    },
-                    animation: {
-                        'scroll': 'scroll 20s linear infinite',
-                    },
-                    keyframes: {
-                        'scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="assets/js/tailwind-config.js"></script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
      .glassmorphism {
             backdrop-filter: blur(12px);
@@ -424,7 +392,7 @@
             <!-- Logo (kiri) -->
             <div class="flex items-center space-x-2">
               <a href="index.html">
-                <img src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png?scale-down-to=512"
+                <img src="assets/images/hotama-logo.png"
                     alt="hotama" class="w-[120px] h-auto ml-3" />
            </a>
                   </div>
@@ -442,7 +410,7 @@
      class="ml-4 bg-purple-100 rounded-full px-4 py-2 flex items-center justify-center"
      target="_blank" 
       rel="noopener noreferrer">
-    <img src="https://alquran.ai/qaraa-web/img/logo1.webp" 
+    <img src="assets/images/qaraa-logo.webp" 
          alt="Qara'a Logo" 
          class="h-auto w-[82px]" />
   </a>
@@ -518,7 +486,7 @@
             flex items-center gap-3
             " target="_blank" 
              rel="noopener noreferrer">
-    <img src="https://img.utdstc.com/icon/5c9/3c4/5c93c4f2937078690d2e9c42fe12a46f9d32ae270eaaed84142fdd10c4e58740:100"
+    <img src="assets/images/playstore-icon.png"
          class="w-6 h-6 md:w-8 md:h-8 object-contain" />
     <div class="flex flex-col items-start leading-tight">
       <span class="text-[10px] md:text-xs text-gray-300">Get it on</span>
@@ -569,7 +537,7 @@
       <!-- Image -->
       <div class="order-1 lg:order-1">
        <div class="about-us-img rounded-2xl p-3 backdrop-blur-sm scroll-reveal mx-auto sm:w-auto w-full "> 
-  <img class="rounded-2xl " src="https://framerusercontent.com/images/LCVsDCZG7TxEIg3DCqODtWRG0.png" alt="pegasus" class="max-w-fit"/>
+  <img class="rounded-2xl " src="assets/images/project-qaraa.png" alt="pegasus" class="max-w-fit"/>
 </div>
 
       </div>
@@ -611,7 +579,7 @@ Fun
 <!-- Technical Card 1 -->
 <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors">
   <div class="mb-8">
-    <img src="https://framerusercontent.com/images/Hs3vGn1lKBRtuffySk1J6ICPHg.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+    <img src="assets/images/service-icon-1.svg" alt="Service Icon" class="w-[60px] h-[60px]">
   </div>
   <h3 class="text-lg font-semibold mb-3">Frontend</h3>
 
@@ -626,7 +594,7 @@ Fun
  <!-- Technical Card 2 -->
 <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors">
       <div class="mb-8">
-          <img src="https://framerusercontent.com/images/3SWLuSYSIPtmIgmKJOPOh6YE.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+          <img src="assets/images/service-icon-3.svg" alt="Service Icon" class="w-[60px] h-[60px]">
       </div>
       <h3 class="text-lg font-semibold mb-3">Backend</h3>
      <ul class="custom-list text-sm leading-relaxed text-gray-400">
@@ -639,7 +607,7 @@ Fun
              <!-- Technical Card 3 -->
 <div class="service-card rounded-xl p-8 text-left bg-[#0d1e22] border border-white/10 hover:border-teal-400 transition-colors">
       <div class="mb-8">
-          <img src="https://framerusercontent.com/images/M0mqWWffbKlVGfK78rGgORzBU.svg" alt="Service Icon" class="w-[60px] h-[60px]">
+          <img src="assets/images/service-icon-4.svg" alt="Service Icon" class="w-[60px] h-[60px]">
       </div>
       <h3 class="text-lg font-semibold mb-3">Features</h3>
             <ul class="custom-list text-sm leading-relaxed text-gray-400">
@@ -660,7 +628,7 @@ Fun
                 px-6 sm:px-8 lg:px-12 scroll-reveal">
   <!-- Logo -->
   <div class="mb-6 flex justify-center">
-    <img src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png?scale-down-to=512"
+    <img src="assets/images/hotama-logo.png"
          alt="Hotama Logo"
          class="w-30 h-12 object-contain">
   </div>
@@ -690,13 +658,13 @@ Fun
     <!-- Hotama Logo -->
      <a href="index.html">
     <img class="w-[180px] h-auto" 
-         src="https://framerusercontent.com/images/cvn0qqe0jS1wja3wxuEqhNmDDJ8.png" 
+         src="assets/images/hotama-logo.png" 
          alt="Hotama Logo">
     </a>
     <!-- Qara'a Logo -->
     <a href="https://alquran.ai" 
        class="bg-purple-100 rounded-full px-3 py-2 flex items-center justify-center">
-      <img src="https://alquran.ai/qaraa-web/img/logo1.webp" 
+      <img src="assets/images/qaraa-logo.webp" 
            alt="Qara'a Logo" 
            class="h-auto w-[92px]" />
     </a>
