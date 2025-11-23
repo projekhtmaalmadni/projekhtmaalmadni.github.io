@@ -662,7 +662,7 @@ const ALL_DATA = {
   },
 
     "siupin": {
-    "title": "Siupin",
+    "title": "Siupin - Kementerian Pertanian Republik Indonesia",
     "subtitle": "E-Catalogue Platform",
     "description": "Platform katalog UPH untuk pemerintah daerah.",
     "full_description": "SIUPIN is a digital platform that provides comprehensive information about Processing Units (UPH - Unit Pengolahan Hasil) across different regions, allowing governments to manage and monitor data.",
@@ -1971,3 +1971,4 @@ function showError(message) {
         console.error('Error display error:', error);
     }
 }
+
