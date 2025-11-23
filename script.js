@@ -48,7 +48,7 @@ const ALL_DATA = {
                 {"src": "assets/octo_logo.png", "alt": "pegasus", "size":"40px"},
                 {"src": "assets/munzalan_logo.png", "alt": "flip", "size":"50px"},
                 {"src": "assets/maureno_logo.png", "alt": "flip" , "size":"20px"},
-                {"src": "assets/Logo Kementan.png", "alt": "kementan" , "size":"20px"},
+                {"src": "assets/Logo Kementan.png", "alt": "kementan" , "size":"40px"},
 
 
                 
@@ -1971,4 +1971,5 @@ function showError(message) {
         console.error('Error display error:', error);
     }
 }
+
 
